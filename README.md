@@ -1,0 +1,2 @@
+# Auto_Vote
+Script for auto-voting on the site https://minecraftrating.ru/projects/ (for the Excalibur-Craft project, but you can change it). The script accepts the data of several VKONTAKTE accounts and authorizes them on the site. To add your accounts, look at the VKAccounts file.json For the script to work correctly, you need to install Python (developed and tested on version 3.7.9), the Requests module (pip install requirements), BeautifulSoup (pip install xml, pip install bs4), as well as json (installed together with Python). \\ 
