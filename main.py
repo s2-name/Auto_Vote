@@ -72,7 +72,9 @@ if Fjson:                                 #Если все нормально о
         }
         #Отправляем запрос с данными для авторизации, если все пройдет ок, то нас редиректнит на первую страницу (см. первый гет запрос)
         VK = session.post('https://login.vk.com/?act=login&soft=1', data=data, headers=headers_VK)
-        print(f"Response code: {VK.status_code}")
+        result_sous = BeautifulSoup(VK.text, 'lxml')
+        promotion_alert = result_sous.select('.promotion-alert')[0].get_text()
+        print(f"Response text: {promotion_alert}")
 
 else:
     #Если файл в данными будет пустым, то выведется сообщение с ошибкой
